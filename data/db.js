@@ -11,12 +11,15 @@ module.exports = {
   findPostComments,
   findCommentById,
   insertComment,
+  findcomments,
 };
 
 function find() {
   return db('posts');
 }
-
+function findcomments(){
+  return db('comments')
+}
 function findById(id) {
   return db('posts').where({ id: Number(id) });
 }
